@@ -8,9 +8,9 @@ The project consists of implementing a seller in the respective department with 
 - findById, findAll, findByDepartment.
   
 Update data resources:
-- insert, delete and update.
+- insert, delete, and update.
 
-Using MySQL database with DAO for implementating each entity, an object responsible for accessing the Database
+Using MySQL database with DAO for implementating each entity, an object responsible for accessing the Database,
 and Factory was used to implement the Dependency Injection concept.
 
 # Resources Used
