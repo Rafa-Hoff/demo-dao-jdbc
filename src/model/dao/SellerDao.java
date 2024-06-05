@@ -5,6 +5,9 @@ import model.entities.Seller;
 
 import java.util.List;
 
+/**
+ * Interface that defines which operations will be used to interact with the class "Seller".
+ */
 public interface SellerDao {
 
     void insert(Seller obj);

@@ -20,6 +20,10 @@ public class SellerDaoJDBC implements SellerDao {
         this.conn = conn;
     }
 
+    /**
+     * Responsible to insert a new Seller in database.
+     * @param obj Seller information.
+     */
     @Override
     public void insert(Seller obj) {
         PreparedStatement st = null;
@@ -60,6 +64,10 @@ public class SellerDaoJDBC implements SellerDao {
         }
     }
 
+    /**
+     * Responsible to update the Seller data in database.
+     * @param obj new Seller information.
+     */
     @Override
     public void update(Seller obj) {
         PreparedStatement st = null;
@@ -86,6 +94,10 @@ public class SellerDaoJDBC implements SellerDao {
         }
     }
 
+    /**
+     * Responsible to delete a Seller by the "ID".
+     * @param id Seller Id.
+     */
     @Override
     public void deleteById(Integer id) {
         PreparedStatement st = null;
@@ -104,6 +116,11 @@ public class SellerDaoJDBC implements SellerDao {
         }
     }
 
+    /**
+     * Responsible to find a Seller by the "ID" and your Department information.
+     * @param id Seller Id.
+     * @return a Seller and respective Department.
+     */
     @Override
     public Seller findById(Integer id) {
         PreparedStatement st = null;
@@ -134,6 +151,13 @@ public class SellerDaoJDBC implements SellerDao {
         }
     }
 
+    /**
+     * Guarantees to reuse the Seller instantiation from the ResultSet.
+     * @param rs ResultSet.
+     * @param dep Department.
+     * @return the Seller information.
+     * @throws SQLException
+     */
     private Seller instantiateSeller(ResultSet rs, Department dep) throws SQLException {
         Seller obj = new Seller();
         obj.setId(rs.getInt("Id"));
@@ -145,6 +169,12 @@ public class SellerDaoJDBC implements SellerDao {
         return obj;
     }
 
+    /**
+     * Guarantees to reuse the Department instantiation from the ResultSet.
+     * @param rs ResultSet.
+     * @return Department information related to the Seller.
+     * @throws SQLException
+     */
     private Department instantiateDepartment(ResultSet rs) throws SQLException {
         Department dep = new Department();
         dep.setId(rs.getInt("DepartmentId"));
@@ -152,6 +182,10 @@ public class SellerDaoJDBC implements SellerDao {
         return dep;
     }
 
+    /**
+     * Responsible to find all the Sellers.
+     * @return all the Sellers information.
+     */
     @Override
     public List<Seller> findAll() {
         PreparedStatement st = null;
@@ -192,6 +226,11 @@ public class SellerDaoJDBC implements SellerDao {
         }
     }
 
+    /**
+     * Responsible to find the Sellers of a Department.
+     * @param department Department
+     * @return Sellers from the Department.
+     */
     @Override
     public List<Seller> findByDepartment(Department department) {
         PreparedStatement st = null;

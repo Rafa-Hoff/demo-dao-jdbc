@@ -9,6 +9,9 @@ import java.util.Date;
 import java.util.List;
 import java.util.Scanner;
 
+/**
+ * Test all the methods from the class "SellerDaoJDBC".
+ */
 public class Program {
 
     public static void main(String[] args) {

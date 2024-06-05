@@ -4,6 +4,9 @@ import db.DB;
 import model.dao.impl.DepartmentDaoJDBC;
 import model.dao.impl.SellerDaoJDBC;
 
+/**
+ * DAO Factory is responsible to instantiate the DAOs (Data Access Object).
+ */
 public class DaoFactory {
 
     public static SellerDao createSellerDao() {

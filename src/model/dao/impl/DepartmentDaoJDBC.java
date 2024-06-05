@@ -17,6 +17,10 @@ public class DepartmentDaoJDBC implements DepartmentDao {
         this.conn = conn;
     }
 
+    /**
+     * Responsible to insert a new Department in database.
+     * @param obj Department information.
+     */
     @Override
     public void insert(Department obj) {
         PreparedStatement st = null;
@@ -52,6 +56,10 @@ public class DepartmentDaoJDBC implements DepartmentDao {
 
     }
 
+    /**
+     * Responsible to update the Department data in database.
+     * @param obj new Department information.
+     */
     @Override
     public void update(Department obj) {
         PreparedStatement st = null;
@@ -74,6 +82,10 @@ public class DepartmentDaoJDBC implements DepartmentDao {
         }
     }
 
+    /**
+     * Responsible to delete a Department by the "ID".
+     * @param id Department ID.
+     */
     @Override
     public void deleteById(Integer id) {
         PreparedStatement st = null;
@@ -94,6 +106,11 @@ public class DepartmentDaoJDBC implements DepartmentDao {
         }
     }
 
+    /**
+     * Responsible to find a Department by the "ID".
+     * @param id Department ID.
+     * @return a Department.
+     */
     @Override
     public Department findById(Integer id) {
         PreparedStatement st = null;
@@ -120,6 +137,12 @@ public class DepartmentDaoJDBC implements DepartmentDao {
         }
     }
 
+    /**
+     * Guarantees to reuse the Department instantiation from the ResultSet.
+     * @param rs ResultSet.
+     * @return Department information.
+     * @throws SQLException
+     */
     private Department instantiateDepartment(ResultSet rs) throws SQLException {
         Department dep = new Department();
         dep.setId(rs.getInt("Id"));
@@ -127,6 +150,10 @@ public class DepartmentDaoJDBC implements DepartmentDao {
         return dep;
     }
 
+    /**
+     * Responsible to find all the Departments.
+     * @return all Departments.
+     */
     @Override
     public List<Department> findAll() {
         PreparedStatement st = null;
