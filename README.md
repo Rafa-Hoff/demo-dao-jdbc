@@ -4,20 +4,20 @@
 # About the project
 My second project in [Professor Nelio Alves](https://github.com/acenelio) Java course.
 
-The project consists of implementing a seller in the respective department with search resources:
+The project consists of implementation of a seller in the respective department with search resources:
 - findById, findAll, findByDepartment.
   
 Manipulating data with:
 - insert, delete, and update.
 
-Using MySQL database with DAO for implementating each entity, an object responsible for accessing the Database,
-and Factory was used to implement the Dependency Injection concept.
+Using MySQL database with DAO to implements each entity, an object responsible for accessing the database and DAOFactory to implement the Dependency Injection concept.
 
 # Resources Used
 
 - JAVA 17
 - JDBC
 - MySQL 8
+
 # How to test the program:
 
 ### Download and install:
@@ -35,9 +35,9 @@ and Factory was used to implement the Dependency Injection concept.
 
 ### Configuring MySQL for the project:
 - Open MySQL Workbench;
-- Select a user with all grants;
+- Select a user with all administrative roles;
 - Create a new database with the command:
-  ```bash
+  ```
   Create database coursejdbc;
   ```
 - Select the database created;
